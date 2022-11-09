@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.25
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.083333336
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -873,6 +873,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &237518875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056276279911598767, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+  m_PrefabInstance: {fileID: 1933830596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &256385404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5640,12 +5645,16 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"timeBetweenWaves","value":{"$content":8.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"spawnPoint1","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"spawnParent","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"healthCanvas","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"goblin_prefab","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1591112134}
     - {fileID: 1933830597}
     - {fileID: 1105746466}
     - {fileID: 1179174295}
+    - {fileID: 1502389418}
+    - {fileID: 6056276279911598767, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
 --- !u!4 &1274979312
 Transform:
   m_ObjectHideFlags: 0
@@ -6560,6 +6569,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4310614304489658, guid: 5cbae0602ce9acf41a98fda3a353569a, type: 3}
   m_PrefabInstance: {fileID: 1488551753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1502389418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502389418, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+  m_PrefabInstance: {fileID: 1933830596}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1503874108
 PrefabInstance:
@@ -7789,9 +7803,52 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1200004962}
     m_Modifications:
-    - target: {fileID: -671742149203938685, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
-      propertyPath: m_AutoBraking
+    - target: {fileID: -8485642290146623028, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"healthbar","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.UI.Slider,
+        UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"maxHealth","value":{"$content":100.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"currentHealth","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: -8485642290146623028, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: _data._objectReferences.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8485642290146623028, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 2036032961}
+    - target: {fileID: -8485642290146623028, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: _data._objectReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 237518875}
+    - target: {fileID: 1195178362, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195178362, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1195178362, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509786786, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509786786, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036032961, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036032961, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3112670464503334785, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
       propertyPath: m_RootOrder
@@ -7803,7 +7860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3112670464503334785, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3112670464503334785, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7840,6 +7897,10 @@ PrefabInstance:
     - target: {fileID: 6056276279911598767, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056276279911598767, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -8252,6 +8313,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036032961 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2036032961, guid: 4c9dd7eec3b03447a900d020cd46e18a, type: 3}
+  m_PrefabInstance: {fileID: 1933830596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2061236387
 PrefabInstance:
   m_ObjectHideFlags: 0
